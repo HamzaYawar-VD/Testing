@@ -1,19 +1,10 @@
-package testCases;
+package TestCases;
 
-import general.functions;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
 
-import java.util.concurrent.TimeUnit;
-
-import java.util.List;
-
-import static browserFactory.BrowserDriver.browserDriver;
 import static browserFactory.BrowserDriver.driver;
 
 public class MultipleTest {
@@ -21,7 +12,7 @@ public class MultipleTest {
     @Test(description = "GoToMenu")
     public static void GoToMenu() throws InterruptedException {
 
-        login.login();
+//        login.login();
 //        ItemSorting.ItemSorting();
 //        SortCheck.sortedCheck();
 //        AddToCart.AddToCart();
@@ -87,7 +78,7 @@ public class MultipleTest {
 //        driver.findElement(By.xpath("//label[text()=\"API Testing\"]")).click();
         BizEmail.sendKeys("John@doe.com");
 //
-         driver.findElement(By.xpath("//*[@id='mktoCheckbox_29473_2']")).click();
+         driver.findElement(By.id("LblmktoCheckbox_30797_0")).click();
         WebElement TextArea = driver.findElement(By.xpath("//textarea[@id=\"How_did_you_hear_about_Sauce_Labs__c\"]"));
         TextArea.sendKeys("this is my feedback");
 //
@@ -98,7 +89,7 @@ public class MultipleTest {
         Thread.sleep(2000);
 
 //
-        driver.findElement(By.xpath("//input[@id='mktoCheckbox_29478_0']")).click();
+        driver.findElement(By.xpath("//input[@id='mktoCheckbox_30802_0']")).click();
 
         driver.navigate().back();
 
@@ -106,15 +97,27 @@ public class MultipleTest {
 
         Thread.sleep(2000);
 
-        driver.findElement(By.xpath("//div[@id='onetrust-button-group']//button[@id='onetrust-accept-btn-handler']")).click();
 
-//       WebElement fbButton =  driver.findElement(By.xpath("//div[@class='column social-container']/a[@href='https://www.facebook.com/saucelabs']//*[name()='svg']//*[name()='path' and @d='M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z']"));
+
+        Thread.sleep(3000);
+
+//        driver.findElement(By.cssSelector("button[aria-label='Close Drift Widget messenger preview overlay']"));
+//
+//        Thread.sleep(3000);
+
+//        driver.findElement(By.xpath("//div[@id='onetrust-button-group']//button[@id='onetrust-accept-btn-handler']")).click();
+
+        js.executeScript("window.scrollBy(99,5864)", "");
+
+        Thread.sleep(2000);
+
+       driver.findElement(By.xpath("//i[@class='svg svg-facebook']//*[name()='svg']//*[name()='path' and contains(@d,'M19 0h-14c')]")).click();
 //       fbButton.click();
 
-        WebElement web = driver.findElement(By.xpath("//div[@class='column social-container']/a[@href='https://www.facebook.com/saucelabs']//*[name()='svg']//*[name()='path' and @d='M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z']"));
-        String url = web.getAttribute("href");
-        driver.navigate().to(url);
-        
+//        WebElement web = driver.findElement(By.xpath("//div[@class='column social-container']/a[@href='https://www.facebook.com/saucelabs']//*[name()='svg']//*[name()='path' and @d='M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z']"));
+//        String url = web.getAttribute("href");
+//        driver.navigate().to(url);
+
 
 
 
