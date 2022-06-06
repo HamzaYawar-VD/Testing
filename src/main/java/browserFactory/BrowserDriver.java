@@ -7,8 +7,13 @@ public class BrowserDriver {
     public static WebDriver driver;
 
     public static WebDriver browserDriver() {
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
-        driver = new ChromeDriver();
+        if(driver == null){
+            System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+            driver = new ChromeDriver();
+        }
+        else {
+            driver = driver;
+        }
         return driver;
     }
 }
