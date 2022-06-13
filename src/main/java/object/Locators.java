@@ -62,7 +62,12 @@ public class Locators {
     public static By Terms = By.cssSelector("#mktoCheckbox_30802_0");
 
 //    public static By fbButton = By.xpath("//i[@class='svg svg-facebook']//*[name()='svg']//*[name()='path' and contains(@d,'M19 0h-14c')]");
-    public static By fbButton = By.xpath("//div[@class=\"column social-container\"]/a[1]");
+    public static By fbButton = By.xpath("//div[@class='column social-container']/a[1]/i");
+
+    public static By Submit = By.cssSelector("button[class='mktoButton']");
+
+    public static By copywright = By.xpath("//div[@class='copyright']");
+
 
 
 

@@ -30,4 +30,9 @@ public class CommonAssertions {
 
         } return j;
     }
+    public static void FbURL(String actual) {
+        String fburl = "https://www.facebook.com/saucelabs";
+
+        Assert.assertEquals(actual,fburl);
+    }
 }
