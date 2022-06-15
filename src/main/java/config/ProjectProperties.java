@@ -6,9 +6,6 @@ import java.util.Properties;
 
 public class ProjectProperties {
 
-
-
-
     public static String GetProperties(String value) {
         String property;
         try {

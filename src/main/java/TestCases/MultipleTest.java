@@ -24,6 +24,11 @@ public class MultipleTest extends BaseTest {
     @Test(description = "GoToSauceLab")
     public static void GoToSaucelabs() throws InterruptedException, AWTException {
         login(username,password);
+        Sorting.ItemSorting();
+        Cart.AddToCart();
+        Cart.NavigateToCart();
+        implicitWait(4);
+        CheckCartItems.CheckCart();
         click(FindElementByXpath(MenuButton));
         implicitWait(4);
         click(FindElementByXpath(AboutButton));

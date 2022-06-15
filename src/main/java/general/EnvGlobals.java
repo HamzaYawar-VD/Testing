@@ -17,6 +17,12 @@ public class EnvGlobals {
     public static String dbUser = p.GetProperties("dbUser");
     public static String dbPassword = p.GetProperties("dbPassword");
 
+    public static String RunBrowser = p.GetProperties("RunBrowser");
+
+
+
+
+
 
 
 }

@@ -2,7 +2,7 @@ package general;
 
 //import browserFactory.BrowserDriver;
 import browserFactory.BrowserDriver;
-import object.Locators;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;

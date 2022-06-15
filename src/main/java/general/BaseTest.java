@@ -73,7 +73,7 @@ public class BaseTest {
         int upperbound = 50;
         int int_random = rand.nextInt(upperbound);
 
-        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + File.separator+ "reports"+File.separator+"Myreport"+int_random+".html");
+        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + File.separator+ "reports"+File.separator+"MyTestReport"+int_random+".html");
 
 //        htmlReporter = new ExtentHtmlReporter(System.getProperty("reports/testreport1.html"));
         htmlReporter.config().setEncoding("utf-8");
