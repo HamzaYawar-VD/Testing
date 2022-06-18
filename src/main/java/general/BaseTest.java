@@ -74,8 +74,6 @@ public class BaseTest {
         int int_random = rand.nextInt(upperbound);
 
         htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + File.separator+ "reports"+File.separator+"MyTestReport"+int_random+".html");
-
-//        htmlReporter = new ExtentHtmlReporter(System.getProperty("reports/testreport1.html"));
         htmlReporter.config().setEncoding("utf-8");
         htmlReporter.config().setDocumentTitle("AutoReport");
         htmlReporter.config().setReportName("My1stReport");
@@ -110,6 +108,7 @@ public class BaseTest {
     }
     @AfterTest
     public void afterTestmethod() {
+
         extent.flush();
     }
 

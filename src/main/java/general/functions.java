@@ -102,41 +102,15 @@ public class functions {
 
 /////////////////////////////////////////////////////
 
-    public static void login(String username, String password) {
-//        sendKeys(FindElementByValue(UserName),username);
-        sendKeys(FindElementById(By.id("user-name")), username);
-        sendKeys(FindElementById(By.id("password")), password);
-        click(FindElementById(LoginButton));
-//        click(FindElementById(By.id("login-button")),LoginButton);
-
-    }
-
-    public static float[] price(By locator) {
-        List<WebElement> items = driver.findElements(locator);
-        int size = items.size();
-
-        float[] prices = new float[size];
-        int counter = 0;
-        for (WebElement j : items) {
-            prices[counter] = Float.parseFloat(j.getText().replace("$", ""));
-            System.out.println("price of " + counter + " is" + prices[counter]);
-
-            counter++;
-
-        }
-        return prices;
-
-    }
-
-    public static void Add2Products(List<WebElement> MyElements) {
-        int i = 0;
-        for (WebElement element : MyElements) {
-            if (i < 2) {
-                click(element);
-            }
-            i++;
-        }
-    }
+//    public static void Add2Products(List<WebElement> MyElements) {
+//        int i = 0;
+//        for (WebElement element : MyElements) {
+//            if (i < 2) {
+//                click(element);
+//            }
+//            i++;
+//        }
+//    }
 
     public static void explicitWait(By locator) {
         Duration d = Duration.ofSeconds(10);
