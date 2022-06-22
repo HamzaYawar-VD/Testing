@@ -1,16 +1,7 @@
 package object;
 
-import general.BaseTest;
-import general.CommonAssertions;
-import general.functions;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
 
-import static general.CommonAssertions.*;
-import static general.EnvGlobals.password;
-import static general.EnvGlobals.username;
 import static general.functions.*;
 
 
@@ -25,11 +16,11 @@ public class LoginObjects{
     //Login Method
     public static void login(String username, String password) {
 
-        FindElementById(Username).clear();
-        sendKeys(FindElementById(Username),username);
-        FindElementById(Password).clear();
-        sendKeys(FindElementById(Password),password);
-        click(FindElementById(LoginButton));
+        findElementById(Username).clear();
+        sendKeys(findElementById(Username),username);
+        findElementById(Password).clear();
+        sendKeys(findElementById(Password),password);
+        click(findElementById(LoginButton));
     }
 
     //Invalid Login Method
@@ -37,13 +28,13 @@ public class LoginObjects{
         browseUrl("https://www.saucedemo.com/");
         explicitWait(Username);
         login(username,password);
-        click(FindElementById(LoginButton));
+        click(findElementById(LoginButton));
     }
 
     //Erase credentials fields
-    public static void Erase() {
-        FindElementById(Username).clear();
-        FindElementById(Password).clear();
+    public static void erase() {
+        findElementById(Username).clear();
+        findElementById(Password).clear();
     }
 
 

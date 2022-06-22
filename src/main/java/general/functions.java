@@ -1,7 +1,6 @@
 package general;
 
 //import browserFactory.BrowserDriver;
-import browserFactory.BrowserDriver;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -12,30 +11,25 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.awt.*;
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import static browserFactory.BrowserDriver.browserDriver;
-import static browserFactory.BrowserDriver.driver;
-import static object.Locators.*;
 
 public class functions {
 
-    public static WebElement FindElementById(By Locator) {
+    public static WebElement findElementById(By Locator) {
         WebElement element = driver.findElement(Locator);
         return element;
     }
 
-    public static WebElement FindElementByXpath(By Locator) {
+    public static WebElement findElementByXpath(By Locator) {
         WebElement element = driver.findElement(Locator);
         return element;
     }
 
-    public static List<WebElement> FindElementsByXpath(By Locator) {
+    public static List<WebElement> findElementsByXpath(By Locator) {
         List<WebElement> element = driver.findElements(Locator);
         return element;
     }
 
-    public static WebElement FindElementByCss(By Locator) {
+    public static WebElement findElementByCss(By Locator) {
         WebElement element = driver.findElement(Locator);
         return element;
     }
@@ -47,7 +41,7 @@ public class functions {
 
     public static void selectElement(By locator, int value) {
 
-        Select element = new Select(FindElementByCss(locator));
+        Select element = new Select(findElementByCss(locator));
         element.selectByIndex(value);
     }
 
@@ -88,29 +82,20 @@ public class functions {
 
     public static void ScrollTo(By locator) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", FindElementByCss(locator));
+        js.executeScript("arguments[0].scrollIntoView();", findElementByCss(locator));
 
 
     }
 
-    public static void Hover(By Locator) {
+    public static void hover(By Locator) {
         Actions builder = new Actions(driver);
-        builder.moveToElement(FindElementByXpath(Locator)).build().perform();
+        builder.moveToElement(findElementByXpath(Locator)).build().perform();
 
     }
 
 
 /////////////////////////////////////////////////////
 
-//    public static void Add2Products(List<WebElement> MyElements) {
-//        int i = 0;
-//        for (WebElement element : MyElements) {
-//            if (i < 2) {
-//                click(element);
-//            }
-//            i++;
-//        }
-//    }
 
     public static void explicitWait(By locator) {
         Duration d = Duration.ofSeconds(10);
@@ -120,14 +105,14 @@ public class functions {
     }
 
     public static void scrollIntoViewCss(By locator, By locator2) throws InterruptedException {
-        WebElement element = FindElementByCss(locator);
+        WebElement element = findElementByCss(locator);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         functions.explicitWait(locator2);
 
     }
 
     public static void scrollIntoViewXpath(By locator, By locator2) throws AWTException {
-        WebElement element = FindElementByXpath(locator2);
+        WebElement element = findElementByXpath(locator2);
         Robot robot = new Robot();
         robot.mouseMove(0, 1050);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
@@ -150,7 +135,7 @@ public class functions {
 
             js.executeScript("window.scrollBy(0,100)");
             try {
-                click(FindElementByXpath(locator));
+                click(findElementByXpath(locator));
                 System.out.println("Element is clickable");
                 break;
             } catch (ElementClickInterceptedException e) {
@@ -158,6 +143,10 @@ public class functions {
             }
             i+=1;
         }
+    }
+
+    public static String getCurrentURL() {
+        return driver.getCurrentUrl();
     }
 }
 

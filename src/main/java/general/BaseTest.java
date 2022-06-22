@@ -68,7 +68,7 @@ public class BaseTest {
     }
 
     @BeforeTest
-    public void BeforeTestMethod() {
+    public void beforeTestMethod() {
         Random rand = new Random();
         int upperbound = 50;
         int int_random = rand.nextInt(upperbound);
@@ -86,7 +86,7 @@ public class BaseTest {
     }
 
     @BeforeMethod
-    public void BeforeMethod( Method testMethod){
+    public void beforeMethod( Method testMethod){
         logger = extent.createTest(testMethod.getName());
 
 

@@ -1,7 +1,5 @@
 package object;
 
-import general.CommonAssertions;
-import general.functions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -11,12 +9,12 @@ import static general.CommonAssertions.*;
 import static general.functions.*;
 
 public class CartObjects {
-    public static By GetAllItems = By.xpath("//button[@class='btn btn_primary btn_small btn_inventory']");
-    public static By CartButtonCss = By.cssSelector("a.shopping_cart_link");
-    public static By CartCounter = By.xpath("//span[@class='shopping_cart_badge']");
+    public static By getAllItems = By.xpath("//button[@class='btn btn_primary btn_small btn_inventory']");
+    public static By cartButtonCss = By.cssSelector("a.shopping_cart_link");
+    public static By cartCounter = By.xpath("//span[@class='shopping_cart_badge']");
     public static By myCart = By.xpath("//span[@class='title']");
-    public static By CartQuantity = By.xpath("//div[@class='cart_quantity']");
-    public static By CartList = By.xpath("//div[@class='cart_list']");
+    public static By cartQuantity = By.xpath("//div[@class='cart_quantity']");
+    public static By cartList = By.xpath("//div[@class='cart_list']");
 
     public static void add2Products(List<WebElement> MyElements) {
         int i = 0;
@@ -29,18 +27,28 @@ public class CartObjects {
 
     }
     public static void goToCart() {
-        explicitWait(CartCounter);
-        click(FindElementByCss(CartButtonCss));
+        explicitWait(cartCounter);
+        click(findElementByCss(cartButtonCss));
         explicitWait(myCart);
 
     }
-    public static void CheckCart()  {
-        explicitWait(CartList);
-        List<WebElement> MyCartItems = FindElementsByXpath(CartQuantity);
+    public static void checkCart()  {
+        explicitWait(cartList);
+        List<WebElement> MyCartItems = findElementsByXpath(cartQuantity);
         int quantity = MyCartItems.size();
         System.out.println(quantity);
-        int check = AssertCartQuantiy(MyCartItems);
+        int check = cartQuantiy(MyCartItems);
         System.out.println(check);
+        assertCartQuantity(check);
+    }
+
+    public static int cartQuantiy(List<WebElement> actual) {
+        int j=0;
+        for (WebElement ignored :actual)
+        {
+            j++;
+
+        } return j;
     }
 
 

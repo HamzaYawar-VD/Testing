@@ -19,6 +19,16 @@ public class EnvGlobals {
 
     public static String RunBrowser = p.GetProperties("RunBrowser");
 
+    //Form
+    public static String firstName = p.GetProperties("firstName");
+    public static String lastName = p.GetProperties("lastName");
+    public static String company = p.GetProperties("company");
+    public static String bizEmail = p.GetProperties("bizEmail");
+    public static String phone = p.GetProperties("phone");
+    public static String howDidYouHear = p.GetProperties("howDidYouHear");
+    public static String comments = p.GetProperties("comments");
+
+
 
 
 
