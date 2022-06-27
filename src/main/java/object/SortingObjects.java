@@ -15,7 +15,6 @@ public class SortingObjects extends BaseTest{
     public static By sortValue = By.xpath("//select[@class='product_sort_container']//option[3]");
     public static By priceAllitems = By.xpath("//div[@class='inventory_item_price']");
     public static void itemSorting() {
-//    login(username,password);
     explicitWait(sortButton);
     click(findElementByCss(sortValue2));
     explicitWait(sortButton);

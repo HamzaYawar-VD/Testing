@@ -18,6 +18,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.sql.SQLException;
 import java.util.Random;
@@ -49,7 +50,7 @@ public class BaseTest {
 
 
     @BeforeSuite
-    public static void beforeMethod() throws SQLException {
+    public static void beforeMethod() {
         System.out.println("Before suite executing");
         driver = BrowserDriver.browserDriver();
 //        updateQuery(updateQuery,dbhost,dbUser,dbPassword);
