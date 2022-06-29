@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 import static general.CommonAssertions.*;
-import static general.functions.*;
+import static general.Functions.*;
 
 public class CartObjects {
     public static By getAllItems = By.xpath("//button[@class='btn btn_primary btn_small btn_inventory']");

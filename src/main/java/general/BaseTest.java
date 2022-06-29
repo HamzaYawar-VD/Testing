@@ -11,22 +11,16 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 //import com.aventstack.extentreports.reporter.ExtentReporter;
 //import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.WebDriver;
-import org.testng.ITest;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.Method;
-import java.sql.SQLException;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 import static general.EnvGlobals.*;
-import static general.functions.*;
-import static general.functions.driver;
+import static general.Functions.*;
 
 public class BaseTest {
 

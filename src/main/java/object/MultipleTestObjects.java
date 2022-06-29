@@ -3,7 +3,7 @@ package object;
 import general.EnvGlobals;
 import org.openqa.selenium.By;
 
-import static general.functions.*;
+import static general.Functions.*;
 
 public class MultipleTestObjects {
 

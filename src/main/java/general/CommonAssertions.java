@@ -2,7 +2,7 @@ package general;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
-import static general.functions.*;
+import static general.Functions.*;
 import static object.CartObjects.*;
 
 import java.util.ArrayList;
@@ -29,14 +29,14 @@ public class CommonAssertions {
 
     public static void assertCartQuantity(int actual) {
         int expected = 2;
-        Assert.assertEquals(actual,expected,"bad cart quantity");
+        Assert.assertEquals(actual,expected);
     }
     public static void fbURL() {
         ArrayList<String> secondTab = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(secondTab.get(1));
         String ActualURL = getCurrentURL();
         String fburl = "https://www.facebook.com/saucelabs";
-        Assert.assertEquals(ActualURL,fburl,"URLs are same");
+        Assert.assertEquals(ActualURL,fburl);
 
     }
 }

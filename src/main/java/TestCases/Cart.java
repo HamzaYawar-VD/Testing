@@ -3,7 +3,7 @@ package TestCases;
 import general.BaseTest;
 import org.testng.annotations.Test;
 
-import static general.functions.*;
+import static general.Functions.*;
 import static object.CartObjects.*;
 import static general.CommonAssertions.*;
 

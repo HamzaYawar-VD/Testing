@@ -4,7 +4,6 @@ import general.BaseTest;
 import org.testng.annotations.Test;
 
 import static general.CommonAssertions.*;
-import static general.functions.*;
 import static object.MultipleTestObjects.*;
 
 public class MultipleTests extends BaseTest {

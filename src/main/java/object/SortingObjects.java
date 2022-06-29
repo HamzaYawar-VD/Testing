@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-import static general.functions.*;
+import static general.Functions.*;
 
 public class SortingObjects extends BaseTest{
 
