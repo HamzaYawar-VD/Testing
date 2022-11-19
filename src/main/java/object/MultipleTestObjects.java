@@ -3,6 +3,7 @@ package object;
 import general.EnvGlobals;
 import org.openqa.selenium.By;
 
+import static browserFactory.DriverManager.getDriver;
 import static general.Functions.*;
 
 public class MultipleTestObjects {
@@ -58,7 +59,7 @@ public class MultipleTestObjects {
         scrollUntillAndClick(terms);
     }
     public static void goToFacebook() {
-        driver.navigate().back();
+        getDriver().navigate().back();
         explicitWait(sauceLabHeader);
         scrollUntillAndClick(fbButton);
 

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
+import static browserFactory.DriverManager.getDriver;
 import static general.Functions.*;
 
 public class SortingObjects extends BaseTest{
@@ -21,7 +22,7 @@ public class SortingObjects extends BaseTest{
     click(findElementByXpath(sortValue));
     }
     public static float[] price(By locator) {
-        List<WebElement> items = driver.findElements(locator);
+        List<WebElement> items = getDriver().findElements(locator);
         int size = items.size();
         float[] prices = new float[size];
         int counter = 0;

@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Phase1 Suite">
+<suite name="Phase1 Suite" parallel="methods" thread-count="2">
 
     <test name="Login And Logout">
         <classes>
@@ -13,26 +13,26 @@
                     <!--                        <include name="ListBoxDemo"></include>-->
                 </methods>
             </class>
-            <class name="TestCases.Sorting">
-                <methods>
-                    <include name="sort"></include>
-                    <include name="assertSorting"></include>
-                </methods>
-            </class>
-            <class name="TestCases.Cart">
-                <methods>
-                    <include name="addToCart"></include>
-                    <include name="navigateToCart"></include>
-                    <include name="cartAssert"></include>
-                </methods>
-            </class>
-            <class name="TestCases.MultipleTests">
-            <methods>
-                <include name="sauceLab"></include>
-                <include name="myForm"></include>
-                <include name="fb"></include>
-            </methods>
-            </class>
+<!--            <class name="TestCases.Sorting">-->
+<!--                <methods>-->
+<!--                    <include name="sort"></include>-->
+<!--                    <include name="assertSorting"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="TestCases.Cart">-->
+<!--                <methods>-->
+<!--                    <include name="addToCart"></include>-->
+<!--                    <include name="navigateToCart"></include>-->
+<!--                    <include name="cartAssert"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="TestCases.MultipleTests">-->
+<!--            <methods>-->
+<!--                <include name="sauceLab"></include>-->
+<!--                <include name="myForm"></include>-->
+<!--                <include name="fb"></include>-->
+<!--            </methods>-->
+<!--            </class>-->
 
         </classes>
     </test>

@@ -2,12 +2,13 @@ package general;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
+import static browserFactory.DriverManager.getDriver;
 import static general.Functions.*;
 import static object.CartObjects.*;
 
 import java.util.ArrayList;
 
-import static browserFactory.BrowserDriver.driver;
+//import static browserFactory.BrowserDriver.driver;
 
 public class CommonAssertions {
 
@@ -32,8 +33,8 @@ public class CommonAssertions {
         Assert.assertEquals(actual,expected);
     }
     public static void fbURL() {
-        ArrayList<String> secondTab = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(secondTab.get(1));
+        ArrayList<String> secondTab = new ArrayList<>(getDriver().getWindowHandles());
+        getDriver().switchTo().window(secondTab.get(1));
         String ActualURL = getCurrentURL();
         String fburl = "https://www.facebook.com/saucelabs";
         Assert.assertEquals(ActualURL,fburl);

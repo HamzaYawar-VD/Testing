@@ -1,41 +1,44 @@
 package general;
 
-//import browserFactory.BrowserDriver;
+//import browserFactory.BrowsergetDriver();
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+//import org.openqa.selenium.support.ui.WebgetDriver()Wait;
 
 import java.awt.*;
 import java.time.Duration;
 import java.util.List;
 
+import static browserFactory.DriverManager.getDriver;
+
 public class Functions {
 
     public static WebElement findElementById(By Locator) {
-        WebElement element = driver.findElement(Locator);
+        WebElement element = getDriver().findElement(Locator);
         return element;
     }
 
     public static WebElement findElementByXpath(By Locator) {
-        WebElement element = driver.findElement(Locator);
+        WebElement element = getDriver().findElement(Locator);
         return element;
     }
 
     public static List<WebElement> findElementsByXpath(By Locator) {
-        List<WebElement> element = driver.findElements(Locator);
+        List<WebElement> element = getDriver().findElements(Locator);
         return element;
     }
 
     public static WebElement findElementByCss(By Locator) {
-        WebElement element = driver.findElement(Locator);
+        WebElement element = getDriver().findElement(Locator);
         return element;
     }
 
     public static WebElement FindElementByValue(By Locator) {
-        WebElement element = driver.findElement(Locator);
+        WebElement element = getDriver().findElement(Locator);
         return element;
     }
 
@@ -46,23 +49,23 @@ public class Functions {
     }
 
 
-    public static WebDriver driver = BaseTest.driver;
+//    public static WebgetDriver() getDriver() = BaseTest.getDriver();
 
 
     public static void browseUrl(String url) {
-        driver.get(url);
+        getDriver().get(url);
     }
 
     public static void maximizeBrowser() {
-        driver.manage().window().maximize();
+       // getDriver().manage().window().maximize();
     }
 
     public static void quitBrowser() {
-        driver.quit();
+        getDriver().quit();
     }
 
     public static void closeBrowser() {
-        driver.close();
+        getDriver().close();
     }
 
 //    public static void click(WebElement element, By loginButton){
@@ -81,14 +84,14 @@ public class Functions {
     }
 
     public static void ScrollTo(By locator) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].scrollIntoView();", findElementByCss(locator));
 
 
     }
 
     public static void hover(By Locator) {
-        Actions builder = new Actions(driver);
+        Actions builder = new Actions(getDriver());
         builder.moveToElement(findElementByXpath(Locator)).build().perform();
 
     }
@@ -99,14 +102,15 @@ public class Functions {
 
     public static void explicitWait(By locator) {
         Duration d = Duration.ofSeconds(10);
-        WebDriverWait wait = new WebDriverWait(driver, d);
+        WebDriverWait wait = new WebDriverWait(getDriver(), d);
+//        WebgetDriver()Wait wait = new WebgetDriver()Wait(getDriver(), d);
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 
     }
 
     public static void scrollIntoViewCss(By locator, By locator2) throws InterruptedException {
         WebElement element = findElementByCss(locator);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
         Functions.explicitWait(locator2);
 
     }
@@ -115,7 +119,7 @@ public class Functions {
         WebElement element = findElementByXpath(locator2);
         Robot robot = new Robot();
         robot.mouseMove(0, 1050);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
         Functions.explicitWait(locator2);
 
 
@@ -123,11 +127,11 @@ public class Functions {
 
     public static void implicitWait(int a){
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(a)) ;
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(a)) ;
     }
 
     public static void scrollUntillAndClick(By locator) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
 
         int i = 0;
 
@@ -146,7 +150,7 @@ public class Functions {
     }
 
     public static String getCurrentURL() {
-        return driver.getCurrentUrl();
+        return getDriver().getCurrentUrl();
     }
 }
 

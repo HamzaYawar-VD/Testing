@@ -19,6 +19,7 @@ import java.io.File;
 import java.lang.reflect.Method;
 import java.util.Random;
 
+import static browserFactory.BrowserDriver.driverInit;
 import static general.EnvGlobals.*;
 import static general.Functions.*;
 
@@ -26,7 +27,7 @@ public class BaseTest {
 
 
 
-    public static WebDriver driver;
+//    public static WebDriver driver;
     public ExtentHtmlReporter htmlReporter;
     public static ExtentReports extent;
     public static ExtentTest logger;
@@ -38,7 +39,7 @@ public class BaseTest {
     public static String query = "Select * from automation_report WHERE id=274181";
 
 
-    public static String updateQuery = ("UPDATE sonardb.automation_report SET Project_Name='AutomationTest', Platform='QA', Build='Test', Environment='QA', Component_id=1, Commit_Number='12345', Branch_Name='B', Execution_Date='2020-02-25 00:00:00', Total_Cases=4, Passed=4, Failed=0, Skipped=0, Execution_Start_Time='2020-02-28 14:36:33', Execution_End_Time='2020-02-28 14:36:35', Coverage=NULL, IsCoverageFromTestRail=0, Repository_Name=NULL WHERE id=274181;");
+    public static String updateQuery = ("UPDATE sonardb.automation_report SET Project_Name='AutomationTest', Platform='QA', Build='Test', Environment='QA', Component_id=0, Commit_Number='12345', Branch_Name='B', Execution_Date='2020-02-25 00:00:00', Total_Cases=4, Passed=4, Failed=0, Skipped=0, Execution_Start_Time='2020-02-28 14:36:33', Execution_End_Time='2020-02-28 14:36:35', Coverage=NULL, IsCoverageFromTestRail=0, Repository_Name=NULL WHERE id=274181;");
 
 
 
@@ -46,13 +47,13 @@ public class BaseTest {
     @BeforeSuite
     public static void beforeMethod() {
         System.out.println("Before suite executing");
-        driver = BrowserDriver.browserDriver();
+//        driver = BrowserDriver.browserDriver();
 //        updateQuery(updateQuery,dbhost,dbUser,dbPassword);
-//        selectQuery(query,dbhost,dbUser,dbPassword);
-        browseUrl(URL);
-        maximizeBrowser();
+        //selectQuery(query,dbhost,dbUser,dbPassword);
+
 
     }
+
 
     @AfterSuite
     public static void afterMethod() throws InterruptedException {
@@ -64,6 +65,7 @@ public class BaseTest {
 
     @BeforeTest
     public void beforeTestMethod() {
+
         Random rand = new Random();
         int upperbound = 50;
         int int_random = rand.nextInt(upperbound);
@@ -82,6 +84,10 @@ public class BaseTest {
 
     @BeforeMethod
     public void beforeMethod( Method testMethod){
+        driverInit();
+        browseUrl(URL);
+        maximizeBrowser();
+
         logger = extent.createTest(testMethod.getName());
 
 
