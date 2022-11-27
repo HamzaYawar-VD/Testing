@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Phase1 Suite" duration-ms="8363" started-at="2022-11-21T07:40:38Z" finished-at="2022-11-21T07:40:46Z">
+    <groups>
+    </groups>
+    <test name="Login And Logout" duration-ms="8363" started-at="2022-11-21T07:40:38Z" finished-at="2022-11-21T07:40:46Z">
+      <class name="TestCases.Login">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestCases.Login@31ef45e3]" name="beforeMethod" is-config="true" duration-ms="6" started-at="2022-11-21T12:40:38Z" finished-at="2022-11-21T12:40:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:TestCases.Login@31ef45e3]" name="beforeTestMethod" is-config="true" duration-ms="125" started-at="2022-11-21T12:40:38Z" finished-at="2022-11-21T12:40:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCases.Login@31ef45e3]" name="beforeMethod" is-config="true" duration-ms="6598" started-at="2022-11-21T12:40:38Z" finished-at="2022-11-21T12:40:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void TestCases.Login.invalidLogin()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCases.Login@31ef45e3]" name="beforeMethod" is-config="true" duration-ms="6626" started-at="2022-11-21T12:40:38Z" finished-at="2022-11-21T12:40:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void TestCases.Login.validLogin()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="invalidLogin()[pri:0, instance:TestCases.Login@31ef45e3]" name="invalidLogin" duration-ms="964" started-at="2022-11-21T12:40:45Z" description="invalid Login" finished-at="2022-11-21T12:40:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:TestCases.Login@31ef45e3]" name="validLogin" duration-ms="1110" started-at="2022-11-21T12:40:45Z" description="Valid Login" finished-at="2022-11-21T12:40:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Login@31ef45e3]" name="afterMethod" is-config="true" duration-ms="22" started-at="2022-11-21T12:40:46Z" finished-at="2022-11-21T12:40:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=invalidLogin status=SUCCESS method=Login.invalidLogin()[pri:0, instance:TestCases.Login@31ef45e3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Login@31ef45e3]" name="afterMethod" is-config="true" duration-ms="3" started-at="2022-11-21T12:40:46Z" finished-at="2022-11-21T12:40:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validLogin status=SUCCESS method=Login.validLogin()[pri:0, instance:TestCases.Login@31ef45e3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTestmethod()[pri:0, instance:TestCases.Login@31ef45e3]" name="afterTestmethod" is-config="true" duration-ms="492" started-at="2022-11-21T12:40:46Z" finished-at="2022-11-21T12:40:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestmethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:TestCases.Login@31ef45e3]" name="afterMethod" is-config="true" duration-ms="10011" started-at="2022-11-21T12:40:46Z" finished-at="2022-11-21T12:40:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- TestCases.Login -->
+    </test> <!-- Login And Logout -->
+  </suite> <!-- Phase1 Suite -->
+</testng-results>

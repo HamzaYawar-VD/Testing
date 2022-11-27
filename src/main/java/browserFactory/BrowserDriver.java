@@ -44,8 +44,9 @@ public class BrowserDriver {
                     break;
 
                 case "Edge":
-                    System.setProperty("webdriver.edge.driver", "resources/msedgedriver.exe");
-                    driver = new EdgeDriver();
+//                    System.setProperty("webdriver.edge.driver", "resources/msedgedriver.exe");
+                    WebDriver driver3 = WebDriverManager.edgedriver().create();
+                    setDriver(driver3);
                     break;
 
                 case "headless":

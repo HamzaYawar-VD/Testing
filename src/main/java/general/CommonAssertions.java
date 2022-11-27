@@ -40,4 +40,22 @@ public class CommonAssertions {
         Assert.assertEquals(ActualURL,fburl);
 
     }
+
+    public static void BeginnerAssertion(String ActualText) {
+        String text = findElementByXpath(By.xpath("//h4[text()='Beginner']")).getText();
+        Assert.assertEquals(text,ActualText,"assertion failed");
+
+    }
+
+    public static void IntermediateAssertion(String ActualText) {
+        String text = findElementByXpath(By.xpath("//h4[text()='Intermediate']")).getText();
+        Assert.assertEquals(text,ActualText,"assertion failed");
+
+    }
+
+    public static void AdvancedAssertion(String ActualText) {
+        String text = findElementByXpath(By.xpath("//h4[text()='Advanced']")).getText();
+        Assert.assertEquals(text,ActualText,"assertion failed");
+
+    }
 }

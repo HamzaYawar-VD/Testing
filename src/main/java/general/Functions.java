@@ -57,7 +57,7 @@ public class Functions {
     }
 
     public static void maximizeBrowser() {
-       // getDriver().manage().window().maximize();
+        getDriver().manage().window().maximize();
     }
 
     public static void quitBrowser() {
