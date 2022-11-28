@@ -13,7 +13,6 @@
                     <!--                        <include name="ListBoxDemo"></include>-->
                 </methods>
             </class>
-<!--            <class name="TestCases.Sorting">-->
 <!--                <methods>-->
 <!--                    <include name="sort"></include>-->
 <!--                    <include name="assertSorting"></include>-->
