@@ -42,6 +42,7 @@ public class Task6C1Objects {
         click(findElementByXpath(programmingButton));
         explicitWait(javaButton);
         click(findElementByXpath(javaButton));
+        System.out.println("i am here");
         explicitWait(w3SchoolButton);
         click(findElementByXpath(w3SchoolButton));
 
