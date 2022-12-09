@@ -60,7 +60,7 @@ public class BaseTest {
     public static void afterMethod() throws InterruptedException, SQLException, ClassNotFoundException {
         System.out.println("After Suite executing...");
         Thread.sleep(10000);
-        Database.dbjob();
+//        Database.dbjob();
 //        driver.close();
 //        System.out.println("driver closed");
     }
