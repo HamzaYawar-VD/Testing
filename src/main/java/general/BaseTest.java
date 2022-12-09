@@ -17,6 +17,7 @@ import org.testng.annotations.*;
 
 import java.io.File;
 import java.lang.reflect.Method;
+import java.sql.SQLException;
 import java.util.Random;
 
 import static browserFactory.BrowserDriver.driverInit;
@@ -56,9 +57,10 @@ public class BaseTest {
 
 
     @AfterSuite
-    public static void afterMethod() throws InterruptedException {
+    public static void afterMethod() throws InterruptedException, SQLException, ClassNotFoundException {
         System.out.println("After Suite executing...");
         Thread.sleep(10000);
+        Database.dbjob();
 //        driver.close();
 //        System.out.println("driver closed");
     }

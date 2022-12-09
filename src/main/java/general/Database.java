@@ -23,6 +23,7 @@ public class Database {
             String password = "WGWi0IIIIi0IdUOY4GWUOkY";
             //Query to Execute
             String query = "SELECT * FROM `sonardb`.`automation_report`;";
+            String query_db = "INSERT INTO `sonardb`.`automation_report` (`Project_Name`, `Platform`, `Build`, `Environment`, `Component_id`, `Commit_Number`, `Branch_Name`, `Execution_Date` , `Total_Cases`, `Passed`, `Failed`, `Skipped`, `Execution_Start_Time`, `Execution_End_Time`, `Coverage`, `IsCoverageFromTestRail`, `Repository_Name`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
             //Load mysql jdbc driver
             Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -34,6 +35,7 @@ public class Database {
 
             // Execute the SQL Query. Store results in ResultSet
             ResultSet rs = stmt.executeQuery(query);
+//            stmt.executeQuery(query_db);
 
             // While Loop to iterate through all data and print results
             while (rs.next()) {

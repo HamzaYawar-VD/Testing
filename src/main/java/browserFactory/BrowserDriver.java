@@ -53,7 +53,8 @@ public class BrowserDriver {
                     System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--headless");
-                    driver = new ChromeDriver(options);
+                    WebDriver driver4 = new ChromeDriver(options);
+                    setDriver(driver4);
                     break;
             }
 
