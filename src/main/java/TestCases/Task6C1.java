@@ -23,7 +23,7 @@ public class Task6C1 extends BaseTest {
     public static void programmingResource()  {
         System.out.println("starting programming test case");
         programming();
-        System.out.println("ending designing test case");
+        System.out.println("ending programming test case");
     }
 
 
