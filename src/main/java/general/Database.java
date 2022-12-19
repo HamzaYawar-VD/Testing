@@ -16,11 +16,11 @@ public class Database {
 
         public static void dbjob() throws SQLException, ClassNotFoundException {
             //Connection URL Syntax: "jdbc:mysql://ipaddress:portnumber/db_name"
-            String dbUrl = "jdbc:mysql://sonar-metrics.c87wxijx5ezi.us-east-1.rds.amazonaws.com:3306/sonardb";
+            String dbUrl = "";
             //Database Username
-            String username = "sonardb_sarosh_user";
+            String username = "";
             //Database Password
-            String password = "WGWi0IIIIi0IdUOY4GWUOkY";
+            String password = "";
             //Query to Execute
             String query = "SELECT * FROM `sonardb`.`automation_report`;";
             String query_db = "INSERT INTO `sonardb`.`automation_report` (`Project_Name`, `Platform`, `Build`, `Environment`, `Component_id`, `Commit_Number`, `Branch_Name`, `Execution_Date` , `Total_Cases`, `Passed`, `Failed`, `Skipped`, `Execution_Start_Time`, `Execution_End_Time`, `Coverage`, `IsCoverageFromTestRail`, `Repository_Name`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -28,7 +28,7 @@ public class Database {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             //Create Connection to DB
-            Connection con = DriverManager.getConnection("jdbc:mysql://sonar-metrics.c87wxijx5ezi.us-east-1.rds.amazonaws.com:3306/sonardb", "sonardb_sarosh_user", "WGWi0IIIIi0IdUOY4GWUOkY");
+            Connection con = DriverManager.getConnection("", "", "");
 
             //Create Statement Object
             Statement stmt = con.createStatement();
