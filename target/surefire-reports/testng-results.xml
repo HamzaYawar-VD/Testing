@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Phase1 Suite" duration-ms="18356" started-at="2022-12-05T14:26:58Z" finished-at="2022-12-05T14:27:16Z">
+    <groups>
+    </groups>
+    <test name="Login And Logout" duration-ms="18356" started-at="2022-12-05T14:26:58Z" finished-at="2022-12-05T14:27:16Z">
+      <class name="TestCases.Task6C1">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestCases.Task6C1@464bee09]" name="beforeMethod" is-config="true" duration-ms="14" started-at="2022-12-05T19:26:58Z" finished-at="2022-12-05T19:26:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:TestCases.Task6C1@464bee09]" name="beforeTestMethod" is-config="true" duration-ms="350" started-at="2022-12-05T19:26:58Z" finished-at="2022-12-05T19:26:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCases.Task6C1@464bee09]" name="beforeMethod" is-config="true" duration-ms="12974" started-at="2022-12-05T19:26:58Z" finished-at="2022-12-05T19:27:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void TestCases.Task6C1.designingResource()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="designingResource()[pri:0, instance:TestCases.Task6C1@464bee09]" name="designingResource" duration-ms="1868" started-at="2022-12-05T19:27:11Z" description="designing" finished-at="2022-12-05T19:27:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- designingResource -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Task6C1@464bee09]" name="afterMethod" is-config="true" duration-ms="22" started-at="2022-12-05T19:27:13Z" finished-at="2022-12-05T19:27:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=designingResource status=SUCCESS method=Task6C1.designingResource()[pri:0, instance:TestCases.Task6C1@464bee09] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCases.Task6C1@464bee09]" name="beforeMethod" is-config="true" duration-ms="407" started-at="2022-12-05T19:27:13Z" finished-at="2022-12-05T19:27:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void TestCases.Task6C1.programmingResource()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="programmingResource()[pri:0, instance:TestCases.Task6C1@464bee09]" name="programmingResource" duration-ms="1729" started-at="2022-12-05T19:27:14Z" description="designing" finished-at="2022-12-05T19:27:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- programmingResource -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Task6C1@464bee09]" name="afterMethod" is-config="true" duration-ms="1" started-at="2022-12-05T19:27:15Z" finished-at="2022-12-05T19:27:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=programmingResource status=SUCCESS method=Task6C1.programmingResource()[pri:0, instance:TestCases.Task6C1@464bee09] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTestmethod()[pri:0, instance:TestCases.Task6C1@464bee09]" name="afterTestmethod" is-config="true" duration-ms="977" started-at="2022-12-05T19:27:15Z" finished-at="2022-12-05T19:27:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestmethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:TestCases.Task6C1@464bee09]" name="afterMethod" is-config="true" duration-ms="10002" started-at="2022-12-05T19:27:16Z" finished-at="2022-12-05T19:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- TestCases.Task6C1 -->
+    </test> <!-- Login And Logout -->
+  </suite> <!-- Phase1 Suite -->
+</testng-results>

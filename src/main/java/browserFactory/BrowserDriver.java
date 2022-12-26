@@ -44,15 +44,17 @@ public class BrowserDriver {
                     break;
 
                 case "Edge":
-                    System.setProperty("webdriver.edge.driver", "resources/msedgedriver.exe");
-                    driver = new EdgeDriver();
+//                    System.setProperty("webdriver.edge.driver", "resources/msedgedriver.exe");
+                    WebDriver driver3 = WebDriverManager.edgedriver().create();
+                    setDriver(driver3);
                     break;
 
                 case "headless":
                     System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--headless");
-                    driver = new ChromeDriver(options);
+                    WebDriver driver4 = new ChromeDriver(options);
+                    setDriver(driver4);
                     break;
             }
 

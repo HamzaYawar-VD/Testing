@@ -1,19 +1,18 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Phase1 Suite" parallel="methods" thread-count="2">
+<suite name="Phase1 Suite" parallel="methods" thread-count="1">
 
     <test name="Login And Logout">
         <classes>
-            <class name="TestCases.Login">
+            <class name="TestCases.Task6C1">
                 <methods>
-                    <include name="invalidLogin"></include>
-                    <include name="validLogin"></include>
+                    <include name="designingResource"></include>
+                    <include name="programmingResource"></include>
                     <!--                        <include name="Scrolling"></include>-->
                     <!--                        <include name="ListBoxDemo"></include>-->
                 </methods>
             </class>
-<!--            <class name="TestCases.Sorting">-->
 <!--                <methods>-->
 <!--                    <include name="sort"></include>-->
 <!--                    <include name="assertSorting"></include>-->
